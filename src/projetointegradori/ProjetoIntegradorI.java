@@ -489,141 +489,203 @@ public class ProjetoIntegradorI {
 		} else if (dificuldade == 3) {
 			Perguntas pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Um programador Java, na tentativa de armazenar quatro valores inteiros referentes a números de contas bancárias em um array, utilizou as instruções abaixo."
+					+ "\nI- int [] contas = {1234, 3451, 2341, 3214};"
+					+ "\nII- int contas = {1234, 3451, 2341, 3214};"
+					+ "\nIII- int [] contas; contas = {1234, 3451, 2341, 3214};"
+					+ "\nIV- contas = new int[4]; contas[1] = 1234; contas[2] = 3451; contas[3] = 2341; contas[4] = 3214;");
+			pergunta.setResposta("I e III");
 
 			List<String> alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("I e III");
+			alternativas.add("II e IV");
+			alternativas.add("III e IV");
+			alternativas.add("I e II");
+			alternativas.add("II, III e IV");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Dos trechos de códigos abaixo, extraídos de um arquivo fonte escrito para a versão 8 da linguagem Java, o único que compila corretamente é");
+			pergunta.setResposta("public static void main(String args[]){}");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("String x = (String) (b > c) ? \"true\" : \"false\"");
+			alternativas.add("public static void main(String args[]){}");
+			alternativas.add("final enum letra {A, B, C}");
+			alternativas.add("Boolean bool = new Boolean()");
+			alternativas.add("Integer inteiro[] = new List[]");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("São tipos primitivos da linguagem Java:");
+			pergunta.setResposta("boolean, double, float e byte.");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("int, string, long e real.");
+			alternativas.add("char, int, real e bit.");
+			alternativas.add("boolean, double, float e byte.");
+			alternativas.add("real, short, long e char.");
+			alternativas.add("string, long int, short int e float.");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Em Java 8, qual modificador de acesso torna um membro disponível somente para classes dentro do mesmo pacote ou subclasses?");
+			pergunta.setResposta("protected");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("public");
+			alternativas.add("default");
+			alternativas.add("private");
+			alternativas.add("protected");
+			alternativas.add("package-private");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Qual o resultado do código abaixo?\n"
+					+ "public class Desafio{"
+					+ "\n"
+					+ "\tpublic static void main(String[] args){"
+					+ "\n"
+					+ "\t\tint value = 554;"
+					+ "\n\t\tString var = (String)value; //linha 1"
+					+ "\n\t\tString temp= ''123'';"
+					+ "\n\t\tint data = (int)temp; //linha 2"
+					+ "\n\t\tSystem.out.println(data+var);"
+					+ "\n\t}"
+					+ "\n}");
+			pergunta.setResposta("Erro de compilação devido as linhas 1 e 2");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("Erro de compilação devido as linhas 1 e 2");
+			alternativas.add("Erro de compilação devido à linha 1");
+			alternativas.add("Erro de compilação devido à linha 2");
+			alternativas.add("''554123''");
+			alternativas.add("677");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Qual o resultado do código abaixo?\n\n"
+					+ "public class Desafio{\n"
+					+ "\n\n"
+					+ "\tpublic static void main(String[] args){\n"
+					+ "\n\n"
+					+ "\t\tList<Integer> elements = new ArrayList<>();\n"
+					+ "\n\t\telements.add(10);\n"
+					+ "\n\t\tint firstElmnt = elements.get(1);\n"
+					+ "\n\t\tSystem.out.println(firstElmnt);\n"
+					+ "\n\t}\n"
+					+ "\n}");
+			pergunta.setResposta("Será lançada uma exceção IndexOutOfBoundsException em tempo de execução.");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("0");
+			alternativas.add("10");
+			alternativas.add("null");
+			alternativas.add("Será lançada uma exceção IndexOutOfBoundsException em tempo de execução.");
+			alternativas.add("Será lançada uma exceção ArrayIndexOutOfBoundsException em tempo de execução.");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Observe o código a seguir na linguagem de programação Java.\n\n"
+					+ "public class Exemplo{\n"
+					+ "\n\n"
+					+ "\tpublic static void main(String[] args){\n"
+					+ "\n\n"
+					+ "\t\tfor(int count = 1; count <= 10; count++){\n"
+					+ "\n\t\t\tif(count % 2 == 0){\n"
+					+ "\n\t\t\t\tSystem.out.printf(\"%d\", count);\n"
+					+ "\n\t\t\t}\n"
+					+ "\n\t}\n"
+					+ "\n}");
+			pergunta.setResposta("2 4 6 8 10");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("1 3 4 5 6 7 8 9 10");
+			alternativas.add("2 4 6 8 10");
+			alternativas.add("null");
+			alternativas.add("1 3 5 7 9");
+			alternativas.add("1");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Considere os seguintes fragmentos de código Java:"
+					+ "\nI- int sum = 7; if(sum > 20){"
+					+ "\nSystem.out.print(\"ganhou \");} else{"
+					+ "\nSystem.out.print(\"perdeu \");} System.out.print(\"o bônus.\");"
+					+ "\n\n"
+					+ "II- int sum = 21; if(sum != 20)"
+					+ "\nSystem.out.print(\"ganhou \"); else"
+					+ "\nSystem.out.print(\"perdeu \"); System.out.print(\"o bônus.\");"
+					+ "\n\nO resultado da execução dos fragmentos em I e II será, respectivamente,");
+			pergunta.setResposta("perdeu o bônus e ganhou o bônus.");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("ganhou e ganhou.");
+			alternativas.add("perdeu e perdeu.");
+			alternativas.add("perdeu o bônus e ganhou o bônus.");
+			alternativas.add("perdeu o bônus e ganhou.");
+			alternativas.add("perdeu e ganhou o bônus.");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Assinale a alternativa INCORRETA acerca dos operadores lógicos da linguagem de programação Java.");
+			pergunta.setResposta("são operadores de deslocamento de bits.");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("são operadores de deslocamento de bits.");
+			alternativas.add("~ é operador lógico de negação.");
+			alternativas.add("&, |, ^ são operadores lógicos E, OU e OU-exclusivo");
+			alternativas.add("==, != são operadores de igualdade e diferença.");
+			alternativas.add("nenhuma das alternativas.");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("public static double desafio() {\n"
+					+ "\tSystem.out.println(\"Digite o numero a ser potenciado\");\n"
+					+ "\tdouble X = scanner.nextDouble();\n"
+					+ "\tSystem.out.println();\n"
+					+ "\tSystem.out.println(\"Digite a potência\");\n"
+					+ "\tdouble Z = scanner.nextInt();\n"
+					+ "\tSystem.out.println();\n"
+					+ "\tdouble resultado = X;\n\n"
+					+ "\tif (Z == 0) {\n"
+					+ "\t\treturn 0;\n"
+					+ "\t} else if (Z == 1) {\n"
+					+ "\t\treturn X;\n"
+					+ "\t} else {\n"
+					+ "\t\tfor (int i = 1; i < Z; i++) {\n"
+					+ "\t\t\tresultado = resultado * X;\n"
+					+ "\t\t}\n"
+					+ "\t\treturn resultado;\n"
+					+ "\t}\n"
+					+ "}"
+					+ "\n\nSe X é igual a 3 e Z igual a 4, qual será o resultado?");
+			pergunta.setResposta("81");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("64");
+			alternativas.add("27");
+			alternativas.add("81");
+			alternativas.add("243");
+			alternativas.add("256");
 
 			pergunta.setAlternativas(alternativas);
 		}
