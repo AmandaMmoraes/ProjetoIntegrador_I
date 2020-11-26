@@ -114,20 +114,22 @@ public class ProjetoIntegradorI {
 				System.out.println();
 				System.out.print("Resposta: ");
 				resposta = leitor.nextInt();
-				
-				if(verificacao(perguntas.get(0), resposta)){
-					
-				}else {
-					
+
+				if (verificacao(perguntas.get(0), resposta)) {
+
+				} else {
+
 				}
-				
+
 			} else if (escolha == 2) {
-				System.out.println("Ele te traz um bife que parece estar muito suculento, mas você não tem a chance nem de provar,\n"
-						+ "pois você morre de sede antes dele finalizar o seu pedido.");
+				System.out.println(
+						"Ele te traz um bife que parece estar muito suculento, mas você não tem a chance nem de provar,\n"
+								+ "pois você morre de sede antes dele finalizar o seu pedido.");
 				System.out.println("\n\n\nDica: preste atenção aos detalhes, qualquer erro pode matá-lo!");
 			} else if (escolha == 3) {
-				System.out.println("Ele te dá toda a informaçãque ele reuniu como trabalhador daquela taverna, mas não adianta\n"
-						+ "de nada, pois você morreu de sede antes do primeiro fato.");
+				System.out.println(
+						"Ele te dá toda a informaçãque ele reuniu como trabalhador daquela taverna, mas não adianta\n"
+								+ "de nada, pois você morreu de sede antes do primeiro fato.");
 				System.out.println("\n\n\nDica: preste atenção aos detalhes, qualquer erro pode matá-lo!");
 			}
 		} else {
@@ -153,12 +155,13 @@ public class ProjetoIntegradorI {
 	// Nessa função vamos ver quantas questao foram acertadas ou erradas, e mostra
 	// se o jogador tem vida
 	public static boolean verificacao(Perguntas pergunta, int alternativaSelecionada) {
-		// se retornar true, o jogador vai poder continuar jogando, e no momento que tiver 0 não pode mais errar.
-		
-		if(pergunta.getResposta().equalsIgnoreCase(pergunta.getAlternativas().get(alternativaSelecionada - 1))) {
+		// se retornar true, o jogador vai poder continuar jogando, e no momento que
+		// tiver 0 não pode mais errar.
+
+		if (pergunta.getResposta().equalsIgnoreCase(pergunta.getAlternativas().get(alternativaSelecionada - 1))) {
 			return true;
-		}else{
-			if(qtdVida > 0) {
+		} else {
+			if (qtdVida > 0) {
 				qtdVida--;
 			}
 			return false;
@@ -195,9 +198,10 @@ public class ProjetoIntegradorI {
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("Somos 3 irmãos: José, Adriano e Caio.\nSabe-se que ou José mais velho ou Adriano é o mais novo.\n"
-					+ "Sabe-se também que ou Adriano é o mais velho ou Caio é o mais velho."
-					+ "\nQuem é o mais velho e o mais novo, respectivamente?");
+			pergunta.setPergunta(
+					"Somos 3 irmãos: José, Adriano e Caio.\nSabe-se que ou José mais velho ou Adriano é o mais novo.\n"
+							+ "Sabe-se também que ou Adriano é o mais velho ou Caio é o mais velho."
+							+ "\nQuem é o mais velho e o mais novo, respectivamente?");
 			pergunta.setResposta("Caio e Adriano");
 
 			alternativas = new ArrayList<>();
@@ -211,7 +215,8 @@ public class ProjetoIntegradorI {
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("A mãe de Ana tem 5 filhas. Fafá, Fefê, Fifí, Fofó e mais uma.\nQual o nome da quinta filha?");
+			pergunta.setPergunta(
+					"A mãe de Ana tem 5 filhas. Fafá, Fefê, Fifí, Fofó e mais uma.\nQual o nome da quinta filha?");
 			pergunta.setResposta("Ana");
 
 			alternativas = new ArrayList<>();
@@ -225,7 +230,8 @@ public class ProjetoIntegradorI {
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("Se durante uma corrida de carros, você ultrapassa o segundo colocado. \nQual a sua posição atual?");
+			pergunta.setPergunta(
+					"Se durante uma corrida de carros, você ultrapassa o segundo colocado. \nQual a sua posição atual?");
 			pergunta.setResposta("Segundo");
 
 			alternativas = new ArrayList<>();
@@ -268,7 +274,8 @@ public class ProjetoIntegradorI {
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("Uma borboleta vive 5 dias e a cada dia ela voa 4 metros. \nQuantos metros ela terá percorrido em 1 semana?");
+			pergunta.setPergunta(
+					"Uma borboleta vive 5 dias e a cada dia ela voa 4 metros. \nQuantos metros ela terá percorrido em 1 semana?");
 			pergunta.setResposta("20");
 
 			alternativas = new ArrayList<>();
@@ -323,148 +330,162 @@ public class ProjetoIntegradorI {
 			alternativas.add("Sábado");
 
 			pergunta.setAlternativas(alternativas);
-			
+
 		} else if (dificuldade == 2) {
 			Perguntas pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Atente-se para a expressão: \"C * (B – A) <= D – B / C.\"\n"
+					+ "Qual seria o resultado da execução dessa expressão, caso o valor das variáveis fossem: A=3; B=6; C=2 e D=9 ?");
+			pergunta.setResposta("true");
 
 			List<String> alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("true");
+			alternativas.add("false");
+			alternativas.add("error");
+			alternativas.add("9");
+			alternativas.add("6");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta(
+					"Considerando os fundamentos de lógica de programação, considere as afirmativas abaixo:\n"
+							+ "I - Toda expressão que possui um operador relacional, necessariamente, tem como resultado um valor do tipo “lógico”.\n"
+							+ "II - As funções \"do-while\" e \"while\" são ambas de repetição.\n"
+							+ "III - É adequado o uso de variáveis cujo tipo de dados seja “inteiro” para armazenar nomes de pessoas.\n");
+			pergunta.setResposta("Apenas as afirmativas I e II são verdadeiras.");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("Apenas a afirmativa I é verdadeira.");
+			alternativas.add("Apenas as afirmativas I e II são verdadeiras.");
+			alternativas.add("Todas são falsas.");
+			alternativas.add("Apenas a afirmativa II é verdadeira.");
+			alternativas.add("Todas são verdadeiras.");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Considere a sub-rotina abaixo:\n\n" + "1. Programa\n"
+					+ "2. Declare X, Y e Z numérico\n" + "3. Leia X\n" + "4. Leia Y\n" + "5. Z:= (X + Y) x Y\n"
+					+ "6. Escreva Z\n" + "7. Fim programa\n\n"
+					+ "Supondo que o valor fornecido para X seja 3 e o valor fornecido para Y seja 4\n"
+					+ "Qual o valor de Z?");
+			pergunta.setResposta("28");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("21");
+			alternativas.add("28");
+			alternativas.add("19");
+			alternativas.add("36");
+			alternativas.add("25");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Analise o seguinte programa:\n\n" + "int a = 5;\n" 
+					+ "for(int i = 0; i <= 4; i++){\n" 
+					+ "  a += 3;\n" 
+					+ "}\n"
+					+ "System.out.println(a)\n\n"
+					+ "Ao final da execução desse programa, o valor impresso da variável a será:");
+			pergunta.setResposta("Syntax error");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("Syntax error");
+			alternativas.add("20");
+			alternativas.add("15");
+			alternativas.add("24");
+			alternativas.add("18");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Supondo que a cada semestre temos 2 provas, como faríamos o cálculo da média final?\n");
+			pergunta.setResposta("media = (p1 + p2) /2");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("media = p1 * p2 - 10");
+			alternativas.add("media = p1/p2 + 10/2");
+			alternativas.add("media = (p1-p2) * 2");
+			alternativas.add("media = p1 + p2 /2");
+			alternativas.add("media = (p1 + p2) /2");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Como se escreve a raiz quadrada de N no java?");
+			pergunta.setResposta("Math.sqrt(N);");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("Math.round(N);");
+			alternativas.add("Math.sqrt(N);");
+			alternativas.add("Math.pow(N,2);");
+			alternativas.add("Math.random(N);");
+			alternativas.add("Math.raizQuadrada(N);");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Como arredondar um número N em java?");
+			pergunta.setResposta("Math.round(N);");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("Math.sqrt(N);");
+			alternativas.add("Math.round(N);");
+			alternativas.add("Math.pow(N,2);");
+			alternativas.add("Math.random(N);");
+			alternativas.add("Math.arredondar(N);");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Como fazer a potenciação de N por X?");
+			pergunta.setResposta("Math.pow(N,X);");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("Math.sqrt(N,X);");
+			alternativas.add("Math.round(N,X);");
+			alternativas.add("Math.pow(N,X);");
+			alternativas.add("Math.random(N,X);");
+			alternativas.add("Math.potenciar(N,X);");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Para o que é usada a função \"do-while\"?");
+			pergunta.setResposta("Repetição com verificação após a execução");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("Repetição com verificação antes da execução");
+			alternativas.add("Repetição com verificação após a execução");
+			alternativas.add("Repetição sem verificação");
+			alternativas.add("Repetição com verificação antes e depois da execução");
+			alternativas.add("Nenhuma das alternativas");
 
 			pergunta.setAlternativas(alternativas);
 
 			pergunta = new Perguntas();
 
-			pergunta.setPergunta("");
-			pergunta.setResposta("");
+			pergunta.setPergunta("Qual a utilidade do \"mod\"?");
+			pergunta.setResposta("Retornar o resto da divisão de um número pelo outro");
 
 			alternativas = new ArrayList<>();
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
-			alternativas.add("");
+			alternativas.add("Retornar o resultado da divisão de um número pelo outro");
+			alternativas.add("Retornar o resultado da soma de um número ao outro");
+			alternativas.add("Retornar o resto da divisão de um número pelo outro");
+			alternativas.add("Retornar o resto da subtração de um número pelo outro");
+			alternativas.add("Retornar o resultado da multiplicação de um número pelo outro");
 
 			pergunta.setAlternativas(alternativas);
-			
+
 		} else if (dificuldade == 3) {
 			Perguntas pergunta = new Perguntas();
 
